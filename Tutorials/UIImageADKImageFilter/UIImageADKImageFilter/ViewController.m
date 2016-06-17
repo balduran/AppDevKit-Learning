@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import <AppDevKit.h>
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *sampleButton;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
+- (IBAction)sampleButtonTapHandler:(id)sender;
 
 @end
 
@@ -16,12 +22,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self setupView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupView {
+
+    UIImage *originalImage = [UIImage imageNamed:@"Love"];
+    UIImage *defaultImage = [UIImage ADKImage:originalImage replaceColor:[UIColor redColor]];
+    UIImage *highlightedImage = [UIImage ADKImage:originalImage replaceColor:[UIColor orangeColor]];
+    
+    [self.sampleButton setImage:defaultImage forState:UIControlStateNormal];
+    [self.sampleButton setTitle:@"CLICK" forState:UIControlStateNormal];
+
+    [self.sampleButton setImage:highlightedImage forState:UIControlStateHighlighted];
+    [self.sampleButton setTitle:@"PRESS" forState:UIControlStateHighlighted];
+
+}
+
+- (IBAction)sampleButtonTapHandler:(id)sender {
 }
 
 @end
