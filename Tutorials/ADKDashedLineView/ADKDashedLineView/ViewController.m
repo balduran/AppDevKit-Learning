@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <AppDevKit.h>
 
 @interface ViewController ()
 
@@ -17,11 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self setupView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupView {
+    ADKDashedLineView *dashedLineView = [[ADKDashedLineView alloc] initWithFrame:CGRectMake(50.0f, 100.0f, 100.0f, 30.0f)];
+    [self.view addSubview:dashedLineView];
 }
 
 @end
