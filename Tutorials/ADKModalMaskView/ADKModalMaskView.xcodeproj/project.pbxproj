@@ -14,6 +14,8 @@
 		3C9ADE641D12E6C2006FDCA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADE621D12E6C2006FDCA0 /* Main.storyboard */; };
 		3C9ADE661D12E6C2006FDCA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADE651D12E6C2006FDCA0 /* Assets.xcassets */; };
 		3C9ADE691D12E6C2006FDCA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADE671D12E6C2006FDCA0 /* LaunchScreen.storyboard */; };
+		3C9ADF211D17F6DA006FDCA0 /* ContextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9ADF201D17F6DA006FDCA0 /* ContextView.m */; };
+		3C9ADF251D17F7CB006FDCA0 /* ContextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADF241D17F7CB006FDCA0 /* ContextView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		3C9ADE651D12E6C2006FDCA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C9ADE681D12E6C2006FDCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C9ADE6A1D12E6C2006FDCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C9ADF1F1D17F6DA006FDCA0 /* ContextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextView.h; sourceTree = "<group>"; };
+		3C9ADF201D17F6DA006FDCA0 /* ContextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextView.m; sourceTree = "<group>"; };
+		3C9ADF241D17F7CB006FDCA0 /* ContextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContextView.xib; sourceTree = "<group>"; };
 		6A862D5E949A0D70D239DE9A /* Pods-ADKModalMaskView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADKModalMaskView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADKModalMaskView/Pods-ADKModalMaskView.debug.xcconfig"; sourceTree = "<group>"; };
 		EF21D9984612AEF631F97C42 /* libPods-ADKModalMaskView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ADKModalMaskView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +74,9 @@
 				3C9ADE5D1D12E6C2006FDCA0 /* AppDelegate.m */,
 				3C9ADE5F1D12E6C2006FDCA0 /* ViewController.h */,
 				3C9ADE601D12E6C2006FDCA0 /* ViewController.m */,
+				3C9ADF1F1D17F6DA006FDCA0 /* ContextView.h */,
+				3C9ADF201D17F6DA006FDCA0 /* ContextView.m */,
+				3C9ADF241D17F7CB006FDCA0 /* ContextView.xib */,
 				3C9ADE621D12E6C2006FDCA0 /* Main.storyboard */,
 				3C9ADE651D12E6C2006FDCA0 /* Assets.xcassets */,
 				3C9ADE671D12E6C2006FDCA0 /* LaunchScreen.storyboard */,
@@ -163,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9ADF251D17F7CB006FDCA0 /* ContextView.xib in Resources */,
 				3C9ADE691D12E6C2006FDCA0 /* LaunchScreen.storyboard in Resources */,
 				3C9ADE661D12E6C2006FDCA0 /* Assets.xcassets in Resources */,
 				3C9ADE641D12E6C2006FDCA0 /* Main.storyboard in Resources */,
@@ -224,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9ADF211D17F6DA006FDCA0 /* ContextView.m in Sources */,
 				3C9ADE611D12E6C2006FDCA0 /* ViewController.m in Sources */,
 				3C9ADE5E1D12E6C2006FDCA0 /* AppDelegate.m in Sources */,
 				3C9ADE5B1D12E6C2006FDCA0 /* main.m in Sources */,

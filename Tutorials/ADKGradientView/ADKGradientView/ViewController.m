@@ -26,11 +26,13 @@
 }
 
 - (void)setupView {
+
     ADKGradientView *gradientView = [[ADKGradientView alloc] initWithFrame:CGRectMake(30.0f, 30.0f, 100.0f, 200.0f)];
     gradientView.beginColor = [UIColor ADKColorWithHexNumber:0x1DB2E8];
     gradientView.endColor = [UIColor ADKColorWithHexNumber:0x380180];
     gradientView.blensType = ADKBlensTypeFromLeftTopToRightBottom;
     [self.view addSubview:gradientView];
+    
 }
 
 @end

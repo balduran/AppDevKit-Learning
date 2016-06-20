@@ -6,8 +6,10 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import "ViewController.h"
 #import <AppDevKit.h>
+
+#import "ViewController.h"
+#import "ContextView.h"
 
 @interface ViewController ()
 
@@ -27,13 +29,12 @@
 }
 
 - (IBAction)sampleButtonTapHandler:(id)sender {
-    UIViewController *viewController = [[UIViewController alloc] initWithNibName:nil bundle:nil];
-    viewController.view.backgroundColor = [UIColor lightGrayColor];
-    viewController.view.frame = CGRectMake(0.0f, 0.0f, 200.0f, 200.0f);
-    viewController.view.center = self.view.center;
-    ADKModalMaskView *modalView = [[ADKModalMaskView alloc] initWithView:viewController.view
+
+    ContextView *contextView = [[[NSBundle mainBundle] loadNibNamed:@"ContextView" owner:self options:nil] objectAtIndex:0];
+    
+    ADKModalMaskView *modalView = [[ADKModalMaskView alloc] initWithView:contextView
                                                               modalColor:[UIColor colorWithWhite:0.0f alpha:0.5f]
-                                           autoDismiss:YES];
+                                                             autoDismiss:YES];
     [modalView showInView:self.view
                  withAnimation:YES
                     completion:^(BOOL finished) {
