@@ -31,8 +31,8 @@
                                     <action selector="sampleButtonTapHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2OZ-IZ-oRd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set button icon with single image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxO-5l-nMV">
-                                <rect key="frame" x="0.0" y="280" width="600" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set button icon with single image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="DxO-5l-nMV">
+                                <rect key="frame" x="20" y="280" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="FJA-nt-eah"/>
                                 </constraints>
@@ -43,10 +43,10 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DxO-5l-nMV" secondAttribute="trailing" constant="20" id="5xb-iK-o8g"/>
+                            <constraint firstItem="DxO-5l-nMV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="88k-KV-ZFM"/>
                             <constraint firstItem="MPP-iz-zLK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="PLZ-ls-NUa"/>
-                            <constraint firstAttribute="trailing" secondItem="DxO-5l-nMV" secondAttribute="trailing" id="QYS-hF-hrC"/>
-                            <constraint firstItem="DxO-5l-nMV" firstAttribute="top" secondItem="MPP-iz-zLK" secondAttribute="bottom" constant="20" id="bBk-JJ-nCp"/>
-                            <constraint firstItem="DxO-5l-nMV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hfI-Ht-r6h"/>
+                            <constraint firstItem="DxO-5l-nMV" firstAttribute="top" secondItem="MPP-iz-zLK" secondAttribute="bottom" constant="20" id="vSH-6v-UZh"/>
                             <constraint firstItem="MPP-iz-zLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wo6-n5-w3F"/>
                         </constraints>
                     </view>
