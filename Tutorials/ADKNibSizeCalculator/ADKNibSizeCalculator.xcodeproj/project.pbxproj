@@ -13,6 +13,8 @@
 		3C9ADEF01D12E768006FDCA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADEEE1D12E768006FDCA0 /* Main.storyboard */; };
 		3C9ADEF21D12E768006FDCA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADEF11D12E768006FDCA0 /* Assets.xcassets */; };
 		3C9ADEF51D12E768006FDCA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADEF31D12E768006FDCA0 /* LaunchScreen.storyboard */; };
+		3C9ADF291D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9ADF271D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.m */; };
+		3C9ADF2A1D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADF281D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.xib */; };
 		B79A1541662D7AA70CAB4F86 /* libPods-ADKNibSizeCalculator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D06C7E7109F6899437755C94 /* libPods-ADKNibSizeCalculator.a */; };
 		F7C7B3501D17870B00D1C57C /* DemoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C7B34E1D17870B00D1C57C /* DemoCollectionViewCell.m */; };
 		F7C7B3511D17870B00D1C57C /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C7B34F1D17870B00D1C57C /* DemoCollectionViewCell.xib */; };
@@ -29,6 +31,9 @@
 		3C9ADEF11D12E768006FDCA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C9ADEF41D12E768006FDCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C9ADEF61D12E768006FDCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C9ADF261D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleCollectionVIewCellCollectionViewCell.h; sourceTree = "<group>"; };
+		3C9ADF271D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleCollectionVIewCellCollectionViewCell.m; sourceTree = "<group>"; };
+		3C9ADF281D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionVIewCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		882705656784DBCDBB92B510 /* Pods-ADKNibSizeCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADKNibSizeCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADKNibSizeCalculator/Pods-ADKNibSizeCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		D06C7E7109F6899437755C94 /* libPods-ADKNibSizeCalculator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ADKNibSizeCalculator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB86608840EF857617B54664 /* Pods-ADKNibSizeCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADKNibSizeCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADKNibSizeCalculator/Pods-ADKNibSizeCalculator.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +104,9 @@
 				F7C7B34D1D17870B00D1C57C /* DemoCollectionViewCell.h */,
 				F7C7B34E1D17870B00D1C57C /* DemoCollectionViewCell.m */,
 				F7C7B34F1D17870B00D1C57C /* DemoCollectionViewCell.xib */,
+				3C9ADF261D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.h */,
+				3C9ADF271D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.m */,
+				3C9ADF281D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.xib */,
 			);
 			path = ADKNibSizeCalculator;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 				3C9ADEF51D12E768006FDCA0 /* LaunchScreen.storyboard in Resources */,
 				3C9ADEF21D12E768006FDCA0 /* Assets.xcassets in Resources */,
 				3C9ADEF01D12E768006FDCA0 /* Main.storyboard in Resources */,
+				3C9ADF2A1D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.xib in Resources */,
 				F7C7B3511D17870B00D1C57C /* DemoCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +246,7 @@
 				3C9ADEEA1D12E768006FDCA0 /* AppDelegate.m in Sources */,
 				3C9ADEE71D12E768006FDCA0 /* main.m in Sources */,
 				F7C7B3501D17870B00D1C57C /* DemoCollectionViewCell.m in Sources */,
+				3C9ADF291D194754006FDCA0 /* SampleCollectionVIewCellCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
