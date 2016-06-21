@@ -10,7 +10,7 @@
 
 #import "ViewController.h"
 
-#import "SimpleCell.h"
+#import "SampleCollectionVIewCell.h"
 #import "LSPullToRefreshView.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
@@ -42,8 +42,8 @@
 {
     self.numberOfCell = 1;
 
-    UINib *simpleNib = [UINib nibWithNibName:@"SimpleCell" bundle:nil];
-    [self.collectionView registerNib:simpleNib forCellWithReuseIdentifier:@"SimpleCell"];
+    UINib *simpleNib = [UINib nibWithNibName:@"SampleCollectionVIewCell" bundle:nil];
+    [self.collectionView registerNib:simpleNib forCellWithReuseIdentifier:@"SampleCollectionVIewCell"];
 
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -81,15 +81,15 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    SimpleCell *cell = (SimpleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"SimpleCell" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell #%ld", indexPath.item];
-    cell.backgroundColor = [UIColor yellowColor];
+    SampleCollectionVIewCell *cell = (SampleCollectionVIewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"SampleCollectionVIewCell" forIndexPath:indexPath];
+
+    cell.thumbImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"IceCream%ld", (long)(indexPath.item % 11 + 1)]];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:@"SimpleCell" withStyle:ADKNibFixedHeightScaling];
+    return [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:@"SampleCollectionVIewCell" withStyle:ADKNibFixedHeightScaling];
 }
 
 @end

@@ -24,7 +24,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor whiteColor];
         self.lightSaberView = ({
             UIImageView *indicatorView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"Lightsaber"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 40.0f, 0.0f, 10.0f)]];
             indicatorView.frame = CGRectMake(50.0f, 6.75f, 40.0f, 27.0f);
@@ -36,7 +36,7 @@
             UILabel *indicatorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.frame.size.width, 20.0f)];
             indicatorLabel.center = CGPointMake(self.center.x, CGRectGetMaxY(self.lightSaberView.frame) + 10.0f);
             indicatorLabel.textAlignment = NSTextAlignmentCenter;
-            indicatorLabel.textColor = [UIColor whiteColor];
+            indicatorLabel.textColor = [UIColor blackColor];
             indicatorLabel;
         });
         [self addSubview:self.indicatorLabel];
@@ -55,7 +55,7 @@
 - (void)stopLightSaberIndicator
 {
     self.indicatorLabel.text = @"Stop";
-    self.indicatorLabel.textColor = [UIColor lightTextColor];
+    self.indicatorLabel.textColor = [UIColor blackColor];
 }
 
 #pragma mark - ADKPullToRefreshViewProtocol
@@ -67,7 +67,7 @@
 - (void)ADKPullToRefreshDragging:(UIScrollView *)scrollView
 {
     self.indicatorLabel.text = NSStringFromSelector(_cmd);
-    self.indicatorLabel.textColor = [UIColor lightTextColor];
+    self.indicatorLabel.textColor = [UIColor blackColor];
 }
 
 - (void)ADKPullToRefreshView:(UIScrollView *)scrollView draggingWithProgress:(CGFloat)progress
@@ -75,9 +75,11 @@
     CGRect rect = CGRectMake(50.0f, 6.75f, 40.0f, 27.0f);
     rect.size.width = MAX(50, 275 * progress) ;
     self.lightSaberView.frame = rect;
+    
+    // Show progress
     int progressPercent = progress * 100;
     self.indicatorLabel.text = [NSString stringWithFormat:@"Force awakening...%d%% ", progressPercent];
-    self.indicatorLabel.textColor = [UIColor lightTextColor];
+    self.indicatorLabel.textColor = [UIColor blackColor];
 }
 
 - (void)ADKPullToRefreshTriggered:(UIScrollView *)scrollView
@@ -93,7 +95,7 @@
         self.lightSaberView.frame = rect;
     }];
     self.indicatorLabel.text = @"Loading...";
-    self.indicatorLabel.textColor = [UIColor whiteColor];
+    self.indicatorLabel.textColor = [UIColor blackColor];
 }
 
 - (CGFloat)ADKPullToRefreshTriggerDistanceTimes:(UIScrollView *)scrollView

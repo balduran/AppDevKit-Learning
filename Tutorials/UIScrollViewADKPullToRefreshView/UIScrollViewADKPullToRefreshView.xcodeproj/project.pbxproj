@@ -14,9 +14,9 @@
 		3C9ADF151D12E79D006FDCA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADF141D12E79D006FDCA0 /* Assets.xcassets */; };
 		3C9ADF181D12E79D006FDCA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9ADF161D12E79D006FDCA0 /* LaunchScreen.storyboard */; };
 		5A740765E1D2728374DD03AC /* libPods-UIScrollViewADKPullToRefreshView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ACF36C2F5D747E257D5741 /* libPods-UIScrollViewADKPullToRefreshView.a */; };
-		783FB9511D192B2D0099E12C /* SimpleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 783FB94F1D192B2D0099E12C /* SimpleCell.m */; };
-		783FB9521D192B2D0099E12C /* SimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783FB9501D192B2D0099E12C /* SimpleCell.xib */; };
 		783FB9551D194A3A0099E12C /* LSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783FB9541D194A3A0099E12C /* LSPullToRefreshView.m */; };
+		78E4DDC21D1962450034E3A3 /* SampleCollectionVIewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4DDC01D1962450034E3A3 /* SampleCollectionVIewCell.m */; };
+		78E4DDC31D1962450034E3A3 /* SampleCollectionVIewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E4DDC11D1962450034E3A3 /* SampleCollectionVIewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +32,11 @@
 		3C9ADF141D12E79D006FDCA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C9ADF171D12E79D006FDCA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C9ADF191D12E79D006FDCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		783FB94E1D192B2D0099E12C /* SimpleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCell.h; sourceTree = "<group>"; };
-		783FB94F1D192B2D0099E12C /* SimpleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCell.m; sourceTree = "<group>"; };
-		783FB9501D192B2D0099E12C /* SimpleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCell.xib; sourceTree = "<group>"; };
 		783FB9531D194A3A0099E12C /* LSPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPullToRefreshView.h; sourceTree = "<group>"; };
 		783FB9541D194A3A0099E12C /* LSPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPullToRefreshView.m; sourceTree = "<group>"; };
+		78E4DDBF1D1962450034E3A3 /* SampleCollectionVIewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleCollectionVIewCell.h; sourceTree = "<group>"; };
+		78E4DDC01D1962450034E3A3 /* SampleCollectionVIewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleCollectionVIewCell.m; sourceTree = "<group>"; };
+		78E4DDC11D1962450034E3A3 /* SampleCollectionVIewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionVIewCell.xib; sourceTree = "<group>"; };
 		B3D55C832A3EA4A908F279D0 /* Pods-UIScrollViewADKPullToRefreshView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIScrollViewADKPullToRefreshView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIScrollViewADKPullToRefreshView/Pods-UIScrollViewADKPullToRefreshView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +73,9 @@
 		3C9ADF071D12E79D006FDCA0 /* UIScrollViewADKPullToRefreshView */ = {
 			isa = PBXGroup;
 			children = (
+				78E4DDBF1D1962450034E3A3 /* SampleCollectionVIewCell.h */,
+				78E4DDC01D1962450034E3A3 /* SampleCollectionVIewCell.m */,
+				78E4DDC11D1962450034E3A3 /* SampleCollectionVIewCell.xib */,
 				783FB9531D194A3A0099E12C /* LSPullToRefreshView.h */,
 				783FB9541D194A3A0099E12C /* LSPullToRefreshView.m */,
 				3C9ADF0B1D12E79D006FDCA0 /* AppDelegate.h */,
@@ -84,9 +87,6 @@
 				3C9ADF161D12E79D006FDCA0 /* LaunchScreen.storyboard */,
 				3C9ADF191D12E79D006FDCA0 /* Info.plist */,
 				3C9ADF081D12E79D006FDCA0 /* Supporting Files */,
-				783FB94E1D192B2D0099E12C /* SimpleCell.h */,
-				783FB94F1D192B2D0099E12C /* SimpleCell.m */,
-				783FB9501D192B2D0099E12C /* SimpleCell.xib */,
 			);
 			path = UIScrollViewADKPullToRefreshView;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9ADF181D12E79D006FDCA0 /* LaunchScreen.storyboard in Resources */,
-				783FB9521D192B2D0099E12C /* SimpleCell.xib in Resources */,
+				78E4DDC31D1962450034E3A3 /* SampleCollectionVIewCell.xib in Resources */,
 				3C9ADF151D12E79D006FDCA0 /* Assets.xcassets in Resources */,
 				3C9ADF131D12E79D006FDCA0 /* Main.storyboard in Resources */,
 			);
@@ -240,7 +240,7 @@
 			files = (
 				783FB9551D194A3A0099E12C /* LSPullToRefreshView.m in Sources */,
 				3C9ADF101D12E79D006FDCA0 /* ViewController.m in Sources */,
-				783FB9511D192B2D0099E12C /* SimpleCell.m in Sources */,
+				78E4DDC21D1962450034E3A3 /* SampleCollectionVIewCell.m in Sources */,
 				3C9ADF0D1D12E79D006FDCA0 /* AppDelegate.m in Sources */,
 				3C9ADF0A1D12E79D006FDCA0 /* main.m in Sources */,
 			);
