@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import <ADKNibSizeCalculator.h>
-#import "DemoCollectionViewCell.h"
-static NSString * const DemoCollectionViewCellIdentifer = @"DemoCollectionViewCell";
+#import "SampleCollectionVIewCell.h"
+
+static NSString * const SampleCollectionVIewCellIdentifer = @"SampleCollectionVIewCell";
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -34,32 +35,34 @@ static NSString * const DemoCollectionViewCellIdentifer = @"DemoCollectionViewCe
 
 - (void)setupCollectionView
 {
-    [self.collectionView registerNib:[UINib nibWithNibName:DemoCollectionViewCellIdentifer bundle:nil] forCellWithReuseIdentifier:DemoCollectionViewCellIdentifer];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"SampleCollectionVIewCell" bundle:nil] forCellWithReuseIdentifier:SampleCollectionVIewCellIdentifer];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return 20;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:DemoCollectionViewCellIdentifer forIndexPath:indexPath];
+    SampleCollectionVIewCell *cell = (SampleCollectionVIewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:SampleCollectionVIewCellIdentifer forIndexPath:indexPath];
+
+    cell.thumbImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"IceCream%ld", (long)(indexPath.item % 11 + 1)]];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat iphone6sWidth = 414.0f;
-    CGSize size = CGSizeMake(iphone6sWidth, 50.0f);
-
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    CGSize size = CGSizeMake(viewWidth, 50.0f);
+    
     //NOTE: you may use collection view to calculate
     //CGSize size = CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.height / 4.0f);
 
     //NOTE: using ADKNibSizeCalculator to easy calculate size
-    //CGSize size = [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:DemoCollectionViewCellIdentifer withStyle:ADKNibFixedHeightScaling];
+    //CGSize size = [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:SampleCollectionVIewCellIdentifer withStyle:ADKNibFixedHeightScaling];
 
     return size;
 }

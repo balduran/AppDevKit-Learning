@@ -1,14 +1,14 @@
 //
-//  DemoCollectionViewCell.m
+//  SampleCollectionVIewCellCollectionViewCell.m
 //  ADKNibSizeCalculator
 //
-//  Created by Anson Ng on 6/20/16.
+//  Created by Chih Feng Sung on 6/21/16.
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import "DemoCollectionViewCell.h"
+#import "SampleCollectionVIewCell.h"
 
-@implementation DemoCollectionViewCell
+@implementation SampleCollectionVIewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

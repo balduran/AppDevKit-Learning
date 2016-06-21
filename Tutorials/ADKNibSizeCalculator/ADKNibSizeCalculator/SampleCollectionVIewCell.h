@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SampleCollectionVIewCellCollectionViewCell : UICollectionViewCell
+@interface SampleCollectionVIewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
