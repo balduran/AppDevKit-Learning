@@ -11,6 +11,7 @@
 #import "ViewController.h"
 
 #import "SimpleCell.h"
+#import "LSPullToRefreshView.h"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -46,6 +47,24 @@
 
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+
+    [self setupPullToRefreshView];
+}
+
+- (void)setupPullToRefreshView
+{
+    self.collectionView.alwaysBounceVertical = YES;
+    LSPullToRefreshView *refreshView = [[LSPullToRefreshView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.view.frame), 60.0f)];
+
+    __weak ViewController *weakSelf = self;
+    [self.collectionView ADKAddPullToRefreshWithHandleView:refreshView actionHandler:^{
+        // Delay for showing animation
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            weakSelf.numberOfCell += 1;
+            [weakSelf.collectionView reloadData];
+            [weakSelf.collectionView.pullToRefreshContentView stopAnimating];
+        });
+    }];
 }
 
 #pragma mark - UICollectionView
@@ -63,7 +82,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCell *cell = (SimpleCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"SimpleCell" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.item];
+    cell.textLabel.text = [NSString stringWithFormat:@"Cell #%ld", indexPath.item];
     cell.backgroundColor = [UIColor yellowColor];
     return cell;
 }
