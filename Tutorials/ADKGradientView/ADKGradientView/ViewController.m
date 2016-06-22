@@ -10,6 +10,8 @@
 #import <AppDevKit.h>
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet ADKGradientView *gradientView;
+@property (weak, nonatomic) IBOutlet ADKDashedLineView *dashLineView;
 
 @end
 
@@ -18,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupView];
+    self.gradientView.layer.cornerRadius = 4.0;
+    self.gradientView.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,12 +31,10 @@
 
 - (void)setupView {
 
-    ADKGradientView *gradientView = [[ADKGradientView alloc] initWithFrame:CGRectMake(30.0f, 30.0f, 100.0f, 200.0f)];
-    gradientView.beginColor = [UIColor ADKColorWithHexNumber:0x1DB2E8];
-    gradientView.endColor = [UIColor ADKColorWithHexNumber:0x380180];
-    gradientView.blensType = ADKBlensTypeFromLeftTopToRightBottom;
-    [self.view addSubview:gradientView];
-    
+    self.gradientView.beginColor = [UIColor ADKColorWithHexNumber:0x1DB2E8];
+    self.gradientView.endColor = [UIColor ADKColorWithHexNumber:0x380180];
+    self.gradientView.blensType = ADKBlensTypeFromLeftTopToRightBottom;
+
 }
 
 @end
