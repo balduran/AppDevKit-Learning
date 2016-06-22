@@ -20,30 +20,29 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self setupView];
-    self.gradientView.layer.cornerRadius = 4.0;
-    self.gradientView.layer.masksToBounds = YES;
-
-
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setupView {
-
+- (void)setupView
+{
+    self.gradientView.layer.cornerRadius = 4.0;
+    self.gradientView.layer.masksToBounds = YES;
     self.gradientView.beginColor = [UIColor ADKColorWithHexNumber:0x1DB2E8];
     self.gradientView.endColor = [UIColor ADKColorWithHexNumber:0x380180];
     self.gradientView.blensType = ADKBlensTypeFromLeftTopToRightBottom;
-
-
 }
-- (IBAction)tapButton:(UIButton *)button {
 
+- (IBAction)tapButton:(UIButton *)button
+{
     [button ADKHideViewWidth];
     [button ADKHideTrailingConstraint];
 }
