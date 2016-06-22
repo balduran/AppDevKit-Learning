@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  UIViewADKAutoLayoutSupport
+//  ADKGradientView
 //
 //  Created by Chih Feng Sung on 6/16/16.
 //  Copyright © 2016 Yahoo. All rights reserved.
