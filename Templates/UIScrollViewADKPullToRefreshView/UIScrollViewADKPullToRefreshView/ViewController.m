@@ -6,7 +6,7 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import <AppDevKit.h>
+// TODO: import AppDevKit
 
 #import "ViewController.h"
 #import "SampleCollectionVIewCell.h"
@@ -53,17 +53,11 @@
 - (void)setupPullToRefreshView
 {
     self.collectionView.alwaysBounceVertical = YES;
+
     LSPullToRefreshView *refreshView = [[LSPullToRefreshView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.view.frame), 60.0f)];
 
-    __weak ViewController *weakSelf = self;
-    [self.collectionView ADKAddPullToRefreshWithHandleView:refreshView actionHandler:^{
-        // Delay for showing animation
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            weakSelf.numberOfCell += 1;
-            [weakSelf.collectionView reloadData];
-            [weakSelf.collectionView.pullToRefreshContentView stopAnimating];
-        });
-    }];
+    // TODO: Add pull-to-refresh view on collection view and update data in action handler.
+    // NOTO: Don't forget to stop animation
 }
 
 #pragma mark - UICollectionView
@@ -84,14 +78,15 @@
 
     cell.thumbImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"IceCream%ld", (long)(indexPath.item % 11 + 1)]];
 
-    cell.contentView.backgroundColor = [[UIColor lightGrayColor] ADKColorShiftByBrightness:0.3f];
+    cell.contentView.backgroundColor = [UIColor lightGrayColor];
 
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:@"SampleCollectionVIewCell" withStyle:ADKNibFixedHeightScaling];
+    return CGSizeMake(CGRectGetWidth(self.view.frame), 96.0f);
+    //return [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:@"SampleCollectionVIewCell" withStyle:ADKNibFixedHeightScaling];
 }
 
 @end
