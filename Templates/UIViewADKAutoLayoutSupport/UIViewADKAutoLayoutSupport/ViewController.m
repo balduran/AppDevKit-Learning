@@ -6,8 +6,9 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import "ViewController.h"
 #import <AppDevKit.h>
+
+#import "ViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet ADKGradientView *gradientView;
@@ -38,7 +39,7 @@
     self.gradientView.layer.masksToBounds = YES;
     self.gradientView.beginColor = [UIColor ADKColorWithHexNumber:0x1DB2E8];
     self.gradientView.endColor = [UIColor ADKColorWithHexNumber:0x380180];
-    self.gradientView.blensType = ADKBlensTypeFromLeftTopToRightBottom;
+    self.gradientView.blendsType =ADKBlendsTypeFromLeftTopToRightBottom;
 }
 
 - (IBAction)tapButton:(UIButton *)button

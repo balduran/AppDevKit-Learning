@@ -36,7 +36,7 @@
     self.gradientView.layer.masksToBounds = YES;
     self.gradientView.beginColor = [UIColor ADKColorWithHexNumber:0x1DB2E8];
     self.gradientView.endColor = [UIColor ADKColorWithHexNumber:0x380180];
-    self.gradientView.blensType = ADKBlensTypeFromLeftTopToRightBottom;
+    self.gradientView.blendsType = ADKBlendsTypeFromLeftTopToRightBottom;
 }
 
 @end
