@@ -43,8 +43,9 @@
 
 - (IBAction)tapButton:(UIButton *)button
 {
-    //hide button width
-    //hide button right distance
+    [button ADKHideViewWidth];
+    [button ADKHideTrailingConstraint];
 }
+
 
 @end

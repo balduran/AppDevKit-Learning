@@ -6,6 +6,8 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
+#import <AppDevKit.h>
+
 #import "ViewController.h"
 #import "ContextView.h"
 
@@ -29,10 +31,15 @@
 - (IBAction)sampleButtonTapHandler:(id)sender {
 
     ContextView *contextView = [[[NSBundle mainBundle] loadNibNamed:@"ContextView" owner:self options:nil] objectAtIndex:0];
-
-    //using contextView to make a mask view
-    //mask color 0.5 alpah black: [UIColor colorWithWhite:0.0f alpha:0.5f]
-    //show the mask view
+    
+    ADKModalMaskView *modalView = [[ADKModalMaskView alloc] initWithView:contextView
+                                                              modalColor:[UIColor colorWithWhite:0.0f alpha:0.5f]
+                                                             autoDismiss:YES];
+    [modalView showInView:self.view
+                 withAnimation:YES
+                    completion:^(BOOL finished) {
+                        // no-op
+                    }];
 }
 
 @end
