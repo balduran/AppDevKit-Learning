@@ -6,6 +6,7 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
+#import <AppDevKit.h>
 
 #import "ViewController.h"
 
@@ -32,9 +33,15 @@
 
 - (void)setupView {
 
-    // Requied image: Love.png
-    // UIControlStateNormal: color = red, title = "CLICK"
-    // UIControlStateHighlighted: color = orange, title = "PRESS"
+    UIImage *originalImage = [UIImage imageNamed:@"Love"];
+    UIImage *defaultImage = [UIImage ADKImage:originalImage replaceColor:[UIColor redColor]];
+    UIImage *highlightedImage = [UIImage ADKImage:originalImage replaceColor:[UIColor orangeColor]];
+    
+    [self.sampleButton setImage:defaultImage forState:UIControlStateNormal];
+    [self.sampleButton setTitle:@"CLICK" forState:UIControlStateNormal];
+    
+    [self.sampleButton setImage:highlightedImage forState:UIControlStateHighlighted];
+    [self.sampleButton setTitle:@"PRESS" forState:UIControlStateHighlighted];
     
 }
 
