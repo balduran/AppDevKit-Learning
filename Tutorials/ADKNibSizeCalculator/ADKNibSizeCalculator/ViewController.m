@@ -59,14 +59,14 @@ static NSString * const SampleCollectionVIewCellIdentifer = @"SampleCollectionVI
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
-    CGSize size = CGSizeMake(viewWidth, 50.0f);
+    //CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    //CGSize size = CGSizeMake(viewWidth, 50.0f);
     
     //NOTE: you may use collection view to calculate
     //CGSize size = CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.height / 4.0f);
 
     //NOTE: using ADKNibSizeCalculator to easy calculate size
-    // CGSize size = [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:SampleCollectionVIewCellIdentifer withStyle:ADKNibFixedHeightScaling];
+    CGSize size = [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:SampleCollectionVIewCellIdentifer withStyle:ADKNibFixedHeightScaling];
 
     return size;
 }
