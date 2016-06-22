@@ -6,10 +6,9 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import <ADKNibSizeCalculator.h>
+#import <AppDevKit.h>
 
 #import "ViewController.h"
-
 #import "SampleCollectionVIewCell.h"
 #import "LSPullToRefreshView.h"
 
@@ -84,6 +83,9 @@
     SampleCollectionVIewCell *cell = (SampleCollectionVIewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"SampleCollectionVIewCell" forIndexPath:indexPath];
 
     cell.thumbImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"IceCream%ld", (long)(indexPath.item % 11 + 1)]];
+
+    cell.contentView.backgroundColor = [[UIColor lightGrayColor] ADKColorShiftByBrightness:0.3f];
+
     return cell;
 }
 
