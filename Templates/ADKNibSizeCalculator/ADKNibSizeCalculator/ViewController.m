@@ -6,7 +6,7 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import <AppDevKit.h>
+// TODO: import AppDevKit's header
 
 #import "ViewController.h"
 #import "SampleCollectionVIewCell.h"
@@ -52,7 +52,7 @@ static NSString * const SampleCollectionVIewCellIdentifer = @"SampleCollectionVI
 
     cell.thumbImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"IceCream%ld", (long)(indexPath.item % 11 + 1)]];
 
-    cell.contentView.backgroundColor = [[UIColor lightGrayColor] ADKColorShiftByBrightness:0.3f];
+    cell.contentView.backgroundColor = [UIColor lightGrayColor];
 
     return cell;
 }
@@ -61,12 +61,8 @@ static NSString * const SampleCollectionVIewCellIdentifer = @"SampleCollectionVI
 {
     CGFloat viewWidth = CGRectGetWidth(self.view.frame);
     CGSize size = CGSizeMake(viewWidth, 50.0f);
-    
-    //NOTE: you may use collection view to calculate
-    //CGSize size = CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.height / 4.0f);
 
-    //NOTE: using ADKNibSizeCalculator to easy calculate size
-    // CGSize size = [[ADKNibSizeCalculator sharedInstance] sizeForNibNamed:SampleCollectionVIewCellIdentifer withStyle:ADKNibFixedHeightScaling];
+    // TODO: using ADKNibSizeCalculator to calculate size easily
 
     return size;
 }
