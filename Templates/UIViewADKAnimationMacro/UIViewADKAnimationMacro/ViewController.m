@@ -6,7 +6,8 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-#import <UIView+ADKAnimationMacro.h>
+// TODO: import AppDevKit.h
+
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -27,7 +28,8 @@
 }
 
 - (IBAction)sampleButtonTapHandler:(UIButton *)sender {
-    [sender popUpAnimation];
+    // TODO: Use popUpAnimation to do an animation
+    
 }
 
 @end

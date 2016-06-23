@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <AppDevKit.h>
 
 @interface ViewController ()
 
@@ -27,9 +26,6 @@
 }
 
 - (void)setupView {
-
-    ADKDashedLineView *dashedLineView = [[ADKDashedLineView alloc] initWithFrame:CGRectMake(50.0f, 100.0f, 200.0f, 200.0f)];
-    [self.view addSubview:dashedLineView];
     
 }
 

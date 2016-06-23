@@ -6,7 +6,7 @@
 //  Copyright © 2016 Yahoo. All rights reserved.
 //
 
-// TODO: import AppDevKit.h
+#import <AppDevKit.h>
 
 #import "ViewController.h"
 
@@ -35,7 +35,8 @@
 
 - (void)setupView {
 
-    // TODO: Use [[UISegmentedControl appearance] setTintColor:..........] with ADK color function to set segment control tint
+    [[UISegmentedControl appearance] setTintColor:[UIColor ADKColorWithHexString:@"4002af"]];
+
 }
 
 - (IBAction)ecSegmentedControlTapHandler:(id)sender {
@@ -47,21 +48,15 @@
 
     switch (self.ecSegmentedControl.selectedSegmentIndex) {
         case 0:
-            // TODO: Set back ground with ADK color function for Auction
-            
-            
+            self.view.backgroundColor = [[UIColor ADKColorWithHexString:@"fbda18"] ADKColorShiftByBrightness:0.7f];
             self.logoImageView.image = [UIImage imageNamed:@"Auction"];
             break;
         case 1:
-            // TODO: Set back ground with ADK color function for Market Place
-            
-            
+            self.view.backgroundColor = [[UIColor ADKColorWithHexString:@"21b1e6"] ADKColorShiftByBrightness:0.7f];
             self.logoImageView.image = [UIImage imageNamed:@"Marketplace"];
             break;
         case 2:
-            // TODO: Set back ground with ADK color function for Shopping
-            
-            
+            self.view.backgroundColor = [[UIColor ADKColorWithHexString:@"4c00a5"] ADKColorShiftByBrightness:0.7f];
             self.logoImageView.image = [UIImage imageNamed:@"Shopping"];
             break;
     }
