@@ -33,16 +33,10 @@
 
 - (void)setupView {
 
+    // TODO: Requied image: Love.png
+    // UIControlStateNormal: color = red, title = "CLICK"
+    // UIControlStateHighlighted: color = orange, title = "PRESS"
     UIImage *originalImage = [UIImage imageNamed:@"Love"];
-    // TODO: Use ADKImage:replaceColor to change image color
-    
-    
-    [self.sampleButton setImage:defaultImage forState:UIControlStateNormal];
-    [self.sampleButton setTitle:@"CLICK" forState:UIControlStateNormal];
-
-    [self.sampleButton setImage:highlightedImage forState:UIControlStateHighlighted];
-    [self.sampleButton setTitle:@"PRESS" forState:UIControlStateHighlighted];
-
 }
 
 - (IBAction)sampleButtonTapHandler:(id)sender {

@@ -16,7 +16,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        self.blensType = ADKBlensTypeFromTopToBottom;
+        self.blendsType = ADKBlendsTypeFromTopToBottom;
         [self setupView];
     }
     return self;
@@ -53,42 +53,42 @@
     //reference: http://myappglog.blogspot.tw/2013/07/blog-post.html and http://www.cnblogs.com/zenny-chen/archive/2012/02/23/2364152.html
     CGContextRef contextRef = UIGraphicsGetCurrentContext();
     CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
-    
+
     NSArray *gradientColors = [NSArray arrayWithObjects:(id)[self.beginColor CGColor], (id)[self.endColor CGColor], nil];
     CGFloat gradientLocation[] = {0.0f, 1.0f};
     CGGradientRef gradientRef = CGGradientCreateWithColors(colorSpaceRef, (CFArrayRef)gradientColors, gradientLocation);
-    
+
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, CGRectGetWidth(rect), CGRectGetHeight(rect))];
     CGContextSaveGState(contextRef);
     [bezierPath addClip];
     [bezierPath setLineWidth:0.0f];
-    
+
     CGPoint beginPoint;
     CGPoint endPoint;
-    switch (self.blensType) {
-        case ADKBlensTypeFromLeftToRight:
+    switch (self.blendsType) {
+        case ADKBlendsTypeFromLeftToRight:
             beginPoint = CGPointMake(0.0f, CGRectGetHeight(rect) / 2.0f);
             endPoint = CGPointMake(CGRectGetWidth(rect), CGRectGetHeight(rect) / 2.0f);
             break;
-        case ADKBlensTypeFromLeftTopToRightBottom:
+        case ADKBlendsTypeFromLeftTopToRightBottom:
             beginPoint = CGPointMake(0.0f, 0.0f);
             endPoint = CGPointMake(CGRectGetWidth(rect), CGRectGetHeight(rect));
             break;
-        case ADKBlensTypeFromRightTopToLeftBottom:
+        case ADKBlendsTypeFromRightTopToLeftBottom:
             beginPoint = CGPointMake(CGRectGetWidth(rect), 0.0f);
             endPoint = CGPointMake(0.0f, CGRectGetHeight(rect));
             break;
-        case ADKBlensTypeFromTopToBottom:
+        case ADKBlendsTypeFromTopToBottom:
         default:
             beginPoint = CGPointMake(CGRectGetWidth(rect) / 2.0f, 0.0f);
             endPoint = CGPointMake(CGRectGetWidth(rect) / 2.0f, CGRectGetHeight(rect));
     }
-    
+
     CGContextDrawLinearGradient(contextRef, gradientRef, beginPoint, endPoint, 0);
     [bezierPath stroke];
-    
+
     CGContextRestoreGState(contextRef);
-    
+
     CGColorSpaceRelease(colorSpaceRef);
     CGGradientRelease(gradientRef);
 }
